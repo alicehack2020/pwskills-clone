@@ -1,6 +1,9 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import HeroSlider from "../components/HeroSlider"
+import Features from "../components/Features"
+import { featureData,productData } from "../data"
+import MultiSlider from "../components/MultiSlider"
  const Home = () => {
   const [menu, setMenu] = useState(false)
   const [searchMobile,setSearchMobile]=useState(false)
@@ -101,8 +104,10 @@ import HeroSlider from "../components/HeroSlider"
 
           {/* sub category */}
          {/* banner */}
-         <HeroSlider/>
-         
+         <HeroSlider />
+         <Features data={featureData} title={"“Pure Hardwork, No Shortcuts!”"} />
+         <MultiSlider/>
+         <Features data={productData} title={"Our Products"} />
        </div> 
     </div>
    
